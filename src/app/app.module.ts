@@ -7,13 +7,10 @@ import { TimelinesComponent } from './timelines/timelines.component';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
+import {DictionaryService} from './dictionary.service';
 
-const routers: Routes = [
-  {
-    path: 'timelines',
-    component: TimelinesComponent
-  }
-];
+const routers: Routes = [];
 
 // @ts-ignore
 // @ts-ignore
@@ -22,7 +19,8 @@ const routers: Routes = [
     AppComponent,
     TimelinesComponent,
     YoutubePlaylistComponent,
-    YoutubePlayerComponent
+    YoutubePlayerComponent,
+    DictionaryComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +30,7 @@ const routers: Routes = [
     })
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [DictionaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
