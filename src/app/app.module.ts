@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TimelinesComponent } from './timelines/timelines.component';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
+import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 
 const routers: Routes = [
   {
@@ -18,7 +20,9 @@ const routers: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    TimelinesComponent
+    TimelinesComponent,
+    YoutubePlaylistComponent,
+    YoutubePlayerComponent
   ],
   imports: [
     BrowserModule,
